@@ -17,12 +17,12 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->string('caption');
-            $table->text('browserList');
-            $table->text('notes');
+            //$table->text('browserList')->nullable();
+            $table->text('notes')->nullable();
             $table->string('image');
             $table->timestamps();
 
-                $table->index('user_id');
+            $table->index('user_id');
         });
     }
 

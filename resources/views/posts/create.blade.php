@@ -8,6 +8,13 @@
 
         <div class="row">
             <div class="col-8 offset-2">
+                @isset($message)
+                    <div class="row">
+                        <div class="col-md-12">
+                            {{ $message }}
+                        </div>
+                    </div>
+                @endisset
                 <div class="row">
                     <h1>Add New Post</h1>
                 </div>
