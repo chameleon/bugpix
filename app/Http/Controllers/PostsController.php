@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
+    //Make every single route below need authorization.
+    public function __construct(){
+        $this->middleware('auth');
+    }
+    
+
     //create a new view in 'posts' folder (I jsut created the posts folder in views)
     //naming convention:  views in a folder that is named after the controller posts:Posts
     // The main View name (create) matches the function name.
